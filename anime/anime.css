@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Peaberry;
+  src: url(PeaberryBase.ttf);
+}
+
+html{
+  background: url('../../files.catbox.moe/xzf59j.png');
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body{
+  color: hotpink;
+  font-size: 20px;
+  font-family:'Peaberry';
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+p{
+  padding: 2px;
+}
+
+ul{
+  list-style:none;
+  line-height: 28px;
+}
+
+a{
+  color: hotpink;
+}
+
+a:hover{
+  background-color: hotpink;
+  color: white;
+}
+
+img{
+
+}
+
+main{
+  background: url();
+  background-color: lightpink;
+  margin: 2% 20%;
+  padding: 25px;
+  border: 5px solid;
+  border-color: #d16189;
+  overflow: hidden;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  display: inherit;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Courier New', 'Arial', monospace;
+  font-weight: 900;
+  font-size: 15px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url("bound.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+}
+
+h1{
+  color:white;
+}
+
+h2{
+  color:white;
+}
+
+h6 {
+  margin: 0 0 5px 0;
+}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 35px;
+  background-color: var(--yellow);
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+.albums{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap:20px;
+  
+}
+
+.album{
+  background:rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display:grid;
+  grid-template-columns: 150px 1fr;
+  grid-gap:10px;
+  align-items:center;
+  color:white;
+  font-weight:100;
+}
+
+.album__artwork{
+  width: 100%;
+  cursor: pointer;
+}
+
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+}
+
+
+

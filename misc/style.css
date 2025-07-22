@@ -1,0 +1,22 @@
+@font-face {
+    font-family:'pc-9800';
+    src:url(../pc-9800.ttf);
+}
+
+body {
+    background-color:transparent;
+    color:#fff;
+    font-family:'pc-9800';
+    font-size:20px;
+    padding:10px;
+}
+
+::selection {
+    background: #f986c4;
+    color:white;
+}
+
+::-moz-selection {
+    background: #f986c4;
+    color:white;
+}

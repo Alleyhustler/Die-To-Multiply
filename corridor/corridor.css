@@ -1,0 +1,116 @@
+@font-face {
+    font-family:'pc-9800';
+    src:url(../pc-9800.ttf);
+}
+        
+@font-face {
+    font-family:'pc-9800-bold';
+    src:url(../pc-9800-bold.ttf);
+}
+
+::selection {
+    background: red;
+    color:white;
+}
+
+::-moz-selection {
+    background: red;
+    color:white;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: "pc-9800";
+  font-size: 15px;
+  background: black url("corridor.gif") fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+	color: white;
+}
+	
+a {
+  color: red;
+}
+
+.main { 
+  background: black;
+  border: 1px solid red;
+  width: 500px;
+  padding:15px;
+  margin: 20px 25px 25px 400px;
+}
+
+.main img, .sidebar-left img {
+  max-width: 100%;
+  height: auto;
+}
+  
+.sidebar-left {
+  background: black;
+  border: 1px solid red;
+  width: 250px;
+  margin-left:75px;
+  padding:15px;
+  margin-top:-25px;
+  min-height:100%;
+  position:fixed;
+  overflow:auto;
+  text-align:center;
+}
+
+.buttons {
+  list-style-type:none;
+  padding:3px;
+}
+
+.button { 
+  text-align:center;
+  border: 1px solid red;
+  padding: 10px;
+  margin:5px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+  
+@media(max-width: 1200px) {
+    .sidebar-left {
+      margin-left: 25px;
+      }
+    
+    .main {
+      margin-left: 350px;
+      }
+}
+  
+@media(max-width: 1000px) {
+    .sidebar-left {
+      margin-left: 5px;
+      }
+    
+    .main {
+      margin-left: 330px;
+      }
+}
+
+@media(orientation:portrait) {
+  .sidebar-left {
+    min-height:0px;
+    width: 100%;
+    margin: 0 auto;
+    top:0;
+    left: 0;
+    padding: 0;
+    font-size: 0.9em;
+    position: relative;
+}
+    
+  .main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+}

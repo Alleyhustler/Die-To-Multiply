@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- Mirrored from candlelitsmiles.neocities.org/shrine/derelict/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Jul 2025 17:28:34 GMT -->
+<head>
+        
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="shroud.css" media="screen">
+        <title>the tower rises ever higher...</title>
+        <script src="../../../code.jquery.com/jquery-2.1.1.min.js"></script>
+        
+        <!-- loading overlay script -->
+        <script>
+          $(window).load(function(){
+            $('.overlay').fadeOut();
+          });
+        </script> 
+        
+        <!-- invert scroll -->
+        <script>
+          const elScroll = document.documentElement;
+
+          elScroll.addEventListener("wheel", (evt) => {
+
+            evt.preventDefault();
+            const delta = Math.sign(-evt.deltaY);
+  
+            elScroll.scrollBy({
+              top: 70 * delta,
+              // behavior: "smooth" will not work with this
+            });
+  
+          }, { passive: false });
+        </script> 
+        
+</head>
+    
+<body>
+  
+  <!-- background audio -->
+    <audio loop autoplay>
+    <source src="https://files.catbox.moe/9iipgq.mp3" type="audio/mpeg">
+    </audio>
+  
+    <script>
+      var aud = document.getElementById("welcome");
+      aud.volume = 0.8;
+    </script>
+  
+  <!-- overlay -->
+  <noscript><style>.overlay{display:none;}</style></noscript>
+  <div class="overlay">Loading...</div>
+  
+  <!-- page content -->
+  <div id="bigWrapper">
+    <img src="megatower.png">
+  </div>
+  
+  <!-- load page at bottom -->
+  <script>
+    function scrollToBottom() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+    history.scrollRestoration = "manual";
+    window.onload = scrollToBottom;
+  </script>
+
+</body>

@@ -1,0 +1,416 @@
+/****** fonts ******/
+@font-face {
+  font-family: "pc-9800";
+  src: url(pc-9800.ttf);
+}
+
+@font-face {
+  font-family: "pc-9800-bold";
+  src: url(pc-9800-bold.ttf);
+}
+
+@font-face {
+  font-family: "Techno";
+  src: url(Techno.ttf);
+}
+
+/****** scrollbar ******/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+/****** select hightlight ******/
+::selection {
+  background: #f986c4;
+  color: white;
+}
+
+::-moz-selection {
+  background: #f986c4;
+  color: white;
+}
+
+html {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/****** body ******/
+body {
+  background-color: black;
+  background-image: url(files.catbox.moe/0yomk4.gif);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "pc-9800";
+  font-size: 20px;
+  padding: 10px;
+}
+
+/****** scrolling text ******/
+.scroll-left {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+.scroll-left p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  transform: translateX(100%);
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/****** nav bar ******/
+#navbar {
+  height: 40px;
+  width: 100%;
+}
+
+#navbar a:hover {
+  transition: 0.3s;
+  color: white;
+  text-shadow: -1px 0 #f986c4, 0 1px #f986c4, 1px 0 #f986c4, 0 -1px #f986c4;
+}
+
+
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+  font-family: "pc-9800-bold";
+  font-size: 18px;
+  letter-spacing: 2px;
+  
+}
+
+#navbar li {
+  padding-top: 10px;
+}
+
+/****** sticky sidebar ******/
+.sticky-icon  {
+	z-index:1;
+	position:fixed;
+	top:20%;
+	right:0%;
+	width:300px;
+	display:flex;
+	flex-direction:column;
+}
+
+.sticky-icon a  {
+	transform:translate(160px,0px);
+	border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98border.png) 5%;
+	margin:4px;
+	text-align: left;
+	text-decoration:none;
+	text-transform:lowercase;
+	padding:12px;
+	font-size:24px;
+	font-family:'pc-9800-bold';
+	transition:all 0.8s;
+}
+
+.sticky-icon a:hover  {
+	color:white;
+	transform:translate(0px,0px);
+}	
+
+.sticky-icon a img {
+	min-width:40px;
+	min-height: 40px;
+	color:#000;
+	line-height:40px;
+	
+	margin-right:20px;
+	transition:all 0.5s;
+}
+
+.Anime {
+	background-color:black;
+  color: white;
+}	
+
+.Music {
+	background-color:black;
+  color: white;
+}
+
+.Corridor  {
+	background-color:black;
+  color: white;
+}
+
+.Games  {
+	background-color:black;
+  color: white;
+}
+
+.Shrine  {
+	background-color:black;
+  color: white;
+}
+
+/****** links ******/
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+/****** waving title ******/
+.titlewave {
+  letter-spacing: -5px;
+  text-align: center;
+  position: relative;
+}
+
+.titlewave span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 90px;
+  font-family: "Techno";
+  animation: wave 2s ease-in-out infinite, whitetime 10s infinite;;
+  animation-delay: calc(.1s*var(--i));
+}
+
+@keyframes wave {
+  0% {
+  transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  40%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes whitetime {
+	0% {color: white;}
+	50% {color: rgb(153, 153, 153);}
+	100% {color: white;}
+}
+
+/****** wrappers ******/
+#wrapper {
+  max-width: 990px;
+  max-height: 100%;
+  width: fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  height: -moz-fit-content;
+  animation: fadeEffect 1s;
+  margin: auto;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#mainwrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#extrawrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/****** main containers ******/
+#title {
+  color: #fff;
+  font-size: 70px;
+  text-align: center;
+  font-family: "Techno";
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+}
+
+#header img {
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98border.png) 5%
+    stretch;
+  background-color: black;
+}
+
+#amplocation {
+  position: absolute;
+  top: 400px;
+  left: 150px;
+  width: 200px;
+  height: 100px;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.95);
+  }
+}
+
+#main {
+  width: 75%;
+  max-height: 800px;
+  float: left;
+  height: 300px;
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98borderalt.png) 5% stretch;
+  padding: 10px;
+  overflow: auto;
+  background-color: black;
+}
+
+#extra {
+  width: 100%;
+  max-height: 800px;
+  float: left;
+  height: 40px;
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98border.png) 5% stretch;
+  padding: 70px;
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+#sidebar {
+  width: 25%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#biowrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#bio1 {
+  min-width: 256px;
+  width: max-content;
+  height: 450px; 
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98border.png) 5%
+    stretch;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: auto;
+  background-color: black;
+}
+
+#bio1 img{
+  max-width: 100%;
+}
+
+#bio2 {
+  width: 62%;
+  float: left;
+  height: 450px;
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98border.png) 5%
+    stretch;
+  padding: 10px;
+  overflow: auto;
+  background-color: black;
+}
+
+.smalltitle {
+  text-align: center;
+  font-family: "pc-9800-bold";
+  font-size: 48px;
+  letter-spacing: 4px;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  animation: pop 1s ease-in-out infinite alternate;
+}
+
+/****** sidebar containers ******/
+.subtitle {
+  text-align: center;
+  font-family: "pc-9800-bold";
+  font-size: 35px;
+  letter-spacing: 4px;
+  margin-top: -20px;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  animation: pop 1s ease-in-out infinite alternate;
+}
+
+.updates {
+  border: 15px solid transparent;
+  border-image-slice: 10;
+  border-image: url(pink98bordersidebar.png)
+    5% stretch;
+  padding: 10px;
+  height: 300px;
+  overflow: hidden;
+  background-color: black;
+}
+
+.banner {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.marquee {
+  overflow: hidden;
+}

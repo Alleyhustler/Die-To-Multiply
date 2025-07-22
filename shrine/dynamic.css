@@ -1,0 +1,143 @@
+/****** fonts ******/
+@font-face {
+  font-family: "dds";
+  src: url(Hiragino%20Kaku%20Gothic%20Pro%20W6.otf);
+}
+
+/****** video ******/
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.viewport-header {
+  position: relative;
+  height: 100vh;
+  bottom: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeEffect 5s;
+  margin: auto;
+}
+
+.viewport-header2 {
+  position: absolute;
+  height: 100vh;
+  top: 100px;
+  left: 50px;
+  right: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeEffect 5s;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'dds';
+  color: #ffe6ee;
+  text-transform: lowercase;
+  letter-spacing: 1vw;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+  font-family: 'dds';
+  color: #ffe6ee;
+  text-transform: lowercase;
+  letter-spacing: 1vw;
+  line-height: 1.2;
+  font-size: 2.5vw;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2:hover {
+animation: pop 1s ease-in-out infinite alternate;
+}
+
+@keyframes pop{
+  from{
+    transform:scale(0.95)
+  }
+ 
+  50%{
+     transform:scale(1)
+  }
+ 
+  to{
+     transform:scale(0.95)
+  }
+}
+
+::selection {
+  background: #30c5ff;
+  color: #fff;
+}
+
+/****** body ******/
+body {
+    background-color:#0A0A0A;
+    color:#fff;
+    font-family:'Verdana';
+    font-size:20px;
+    padding:10px;
+    height: 100%;
+    overflow: hidden;
+}
+        
+/****** wrappers ******/
+#wrapper{
+    max-width:1000px;
+    max-height:100%;
+    width:fit-content;
+    height:fit-content;
+    width: -moz-fit-content;
+    height: -moz-fit-content;
+    animation: fadeEffect 1s;
+    margin: auto;
+}
+
+#mainwrapper{
+    margin-top:20px;
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    animation: fadeEffect 1s;
+    margin: auto;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/****** main containers ******/
+#main{
+    width:100%; 
+    max-height:800px;
+    float:left;
+    height:300px;
+    border: 10px solid;
+    border-color: white;
+    padding:10px;
+    overflow:auto;
+    background-color:#0A0A0A;
+}
+
+audio { display:none; }
